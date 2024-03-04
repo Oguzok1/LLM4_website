@@ -1,5 +1,4 @@
 import streamlit as st
-import random
 import time
 from tinydb import TinyDB
 import requests
