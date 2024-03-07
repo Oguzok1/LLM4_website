@@ -2,7 +2,7 @@ import streamlit as st
 import time
 from openai import OpenAI
 
-st.title("Simple chat")
+st.title("Math Chat")
 
 # Initialize the chat history
 if "chat_history" not in st.session_state:
@@ -20,7 +20,6 @@ def response_generator(prompt: str, chat_history: list) -> None:
     )
 
     response = unfiltered_response.choices[0].message.content
-
     # Append the assistant's response to the chat history
     chat_history.append({"role": "assistant", "content": response})
 
